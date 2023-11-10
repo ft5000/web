@@ -1,0 +1,48 @@
+body {
+    background-color: #000000;
+    overflow-y: hidden;
+    user-select: none;
+}
+
+.column {
+    width: 45vw;
+    height: 100vh;
+    margin: auto;
+}
+.content {
+    transform: translateY(18%);
+    height: 100%;
+}
+
+.column h1 {
+    position: relative;
+    font-family: 'Sinistre';
+    color: #ff000d;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 198px;
+    line-height: 176px;
+}
+
+.column a {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 24px;
+    color: #72c100;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#decal1 {
+    position: absolute;
+    z-index: 1;
+    bottom: 12%;
+    right: 25%
+}
+
+@font-face {
+    font-family: 'Sinistre';
+    src: url('resources/fonts/SINISTRE-REGULAR.OTF') format('otf'), url('resources/fonts/SINISTRE-BOLD.OTF') format('otf'), url('resources/fonts/SINISTRE-DARK.OTF') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
