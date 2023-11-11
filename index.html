@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ft5000</title>
     <!-- <script src="p5.js"></script>
     <script src="p5.sound.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="resources/imgs/decal2.png">
   </head>
 
   <body>
@@ -23,5 +23,16 @@
             <img id="decal1" src="resources/imgs/decal1.png"></img>
         </div>
     </div>
+    <script>
+      var text = "$A$b ^biaaaaan.  4$$FAB.F*$$$✞$$✵"
+      setInterval(function() {
+        var title = "";
+        for (var i = 0; i < 16; i++) {
+          var r = Math.round(Math.random() * (text.length - 1));
+          title += text[r];
+        }
+        document.title = title;
+      }, 60)
+    </script>
   </body>
 </html>
