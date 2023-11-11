@@ -1,6 +1,6 @@
 body {
     background-color: #ffadad;
-    overflow-y: hidden;
+    overflow: hidden;
     user-select: none;
 }
 
@@ -59,20 +59,28 @@ body {
     color: #ffffff;
 }
 
+.center-v {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
 #decal1 {
     position: absolute;
     z-index: 1;
-    transform: translate(50%, -55%);
-    animation: MoveUpDown 5s linear infinite;
+    transform: translate(50%, -110%);
+    animation: decal-anim 5s linear infinite;
     animation-timing-function: ease-in-out;
 }
 
-@keyframes MoveUpDown {
+@keyframes decal-anim {
     0%, 100% {
-      bottom: -225px
+        transform: translate(50%, -115%);
     }
     50% {
-      bottom: -250px
+        transform: translate(50%, -110%);
     }
   }
 
@@ -89,3 +97,9 @@ body {
     /* font-weight: normal;
     font-style: normal; */
 }
+
+@media only screen and (orientation: portrait) {
+    .content a {
+        font-size: 32px;
+    }
+  }
