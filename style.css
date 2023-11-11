@@ -1,5 +1,5 @@
 body {
-    background-color: #fff6f6;
+    background-color: #ffadad;
     overflow-y: hidden;
     user-select: none;
 }
@@ -28,7 +28,7 @@ body {
 .title {
     font-family: 'Sinistre Dark';
     font-weight: bolder;
-    color:#4169e1;
+    color: #ff0000;
     font-size: 176px;
     line-height: 112px;
     letter-spacing: -0.2rem;;
@@ -50,13 +50,13 @@ body {
 .content a {
     font-family: 'Necto Mono';
     font-size: 26px;
-    color: #999;
+    color: #ff0000;
     text-decoration: none;
     cursor: pointer;
 }
 
 .content a:hover {
-    color: #72c100;
+    color: #ffffff;
 }
 
 #decal1 {
