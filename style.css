@@ -1,48 +1,91 @@
 body {
-    background-color: #000000;
+    background-color: #fff6f6;
     overflow-y: hidden;
     user-select: none;
 }
 
 .column {
-    width: 45vw;
+    width: 820px;
     height: 100vh;
     margin: auto;
 }
 .content {
-    transform: translateY(18%);
+    transform: translateY(35%);
+    width: 100%;
+    height: 36rem;
+}
+
+.content-box {
+    border: grey 4px solid;
+    box-shadow: grey 8px 8px;
+    position: absolute;
+    z-index: -1;
+    width: 90%;
+    height: 36rem;
+    transform: translate(10%, -118%);
+}
+
+.title {
+    font-family: 'Sinistre Dark';
+    font-weight: bolder;
+    color:#4169e1;
+    font-size: 176px;
+    line-height: 112px;
+    letter-spacing: -0.2rem;;
+    height: fit-content;
+}
+
+.links {
+    width: 100%;
     height: 100%;
+    padding: 24px;
 }
 
-.column h1 {
-    position: relative;
-    font-family: 'Sinistre';
-    color: #ff000d;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 198px;
-    line-height: 176px;
+.cross {
+    width: 14px;
+    height: 14px;
+    transform: translate(50%,5%)
 }
 
-.column a {
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 24px;
-    color: #72c100;
+.content a {
+    font-family: 'Necto Mono';
+    font-size: 26px;
+    color: #999;
     text-decoration: none;
     cursor: pointer;
+}
+
+.content a:hover {
+    color: #72c100;
 }
 
 #decal1 {
     position: absolute;
     z-index: 1;
-    bottom: 12%;
-    right: 25%
+    transform: translate(50%, -55%);
+    animation: MoveUpDown 5s linear infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      bottom: -225px
+    }
+    50% {
+      bottom: -250px
+    }
+  }
+
+@font-face {
+    font-family: 'Sinistre Dark';
+    src: url('resources/fonts/SINISTRE-DARK.OTF');
+    font-weight: bold;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'Sinistre';
-    src: url('resources/fonts/SINISTRE-REGULAR.OTF') format('otf'), url('resources/fonts/SINISTRE-BOLD.OTF') format('otf'), url('resources/fonts/SINISTRE-DARK.OTF') format('otf');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Necto Mono';
+    src: url('resources/fonts/NECTOMONO-REGULAR.OTF');
+    /* font-weight: normal;
+    font-style: normal; */
 }
