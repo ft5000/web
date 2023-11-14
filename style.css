@@ -1,10 +1,11 @@
 :root {
     --col-1: #82e214;
     --col-2: #ffffff;
+    --col-3: #111111;
   }
 
 body {
-    background-color: #000000;
+    background-color: var(--col-3);
     overflow: hidden;
     user-select: none;
 }
@@ -84,6 +85,11 @@ footer {
 
 .svg-fill-2 {
     fill: var(--col-2);
+    fill-rule: evenodd;
+}
+
+.svg-fill-3 {
+    fill: var(--col-3);
     fill-rule: evenodd;
 }
 
