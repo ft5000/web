@@ -55,14 +55,15 @@ body {
 
 .content {
     padding-top: 128px;
+    padding-bottom: 64px;
 }
 
 .content svg {
-    margin-bottom: 128px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     transform: scale(0.75);
+    padding-bottom: 64px;
 }
 
 .title {
