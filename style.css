@@ -1,7 +1,7 @@
 :root {
-    --col-1: #111111;
-    --col-2: #ffafaf;
-    --col-3: #ff9999;
+    --col-1: #ff9999;
+    --col-2: #ff9999;
+    --col-3: #111111;
     --col-4: #ffffff00;
 }
 
@@ -13,12 +13,25 @@ body {
     overflow-x: hidden;
 }
 
+p {
+    color: var(--col-1)
+}
+
 /* footer #icon {
     width: fit-content;
     height: fit-content;
     transform: translateY(50%);
     margin: auto;
 } */
+
+.bg-img {
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+}
 
 .icon {
     width: fit-content;
