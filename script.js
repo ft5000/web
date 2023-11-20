@@ -33,20 +33,23 @@ dark_btn.addEventListener('click', () => {
     setDarkTheme()
 });
 
-function toggleOpen(section) {
+function toggleOpen(target) {
+    var section = target.nextElementSibling;
     if (section.classList[0].includes('closed')) {
         section.classList.remove('section-content-closed');
         section.classList.add('section-content-open');
+        target.innerHTML = target.innerHTML.replace("+","-")
     }
     else {
         section.classList.remove('section-content-open');
         section.classList.add('section-content-closed');
+        target.innerHTML = target.innerHTML.replace("-","+")
     }
 }
 
 const titles = document.getElementsByClassName('title');
 for (var i = 0; i < titles.length; i++) {
     titles[i].addEventListener('click', (event) => {
-        toggleOpen(event.target.nextElementSibling);
+        toggleOpen(event.target);
     })
 }

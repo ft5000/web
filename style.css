@@ -9,6 +9,7 @@ section {
     border-left: 1px var(--col-1) dashed;
     margin-bottom: 96px;
     min-height: 0px;
+    width: 100%;
 }
 
 .section-content-open {
@@ -38,20 +39,19 @@ p {
 }
 
 #palette {
-    position:absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width:fit-content;
-    height:fit-content;
+    margin: 0;
+    width: 100vw;
+    height: fit-content;
     border: 1px solid var(--col-1);
-    margin: 24px;
-    
+    z-index: 1;
 }
 
 .swatch {
-    position: relative;
-    width: 32px;
-    height: 8px;
+    width: 50vw;
+    height: 12px;
     cursor: pointer;
 }
 
@@ -78,13 +78,15 @@ p {
 }
 
 .icon {
-    width: fit-content;
-    padding:96px;
+    width: 100%;
+    padding-top: 48px;
     margin: auto;
 }
 
 #links {
+    display: block;
     margin: auto;
+    margin-bottom: 96px;
 }
 
 #links a {
@@ -96,7 +98,7 @@ p {
 
 .column {
     width: 768px;
-    height: 100vh;
+    padding-bottom:96px;
     margin: auto;
 }
 
@@ -186,13 +188,24 @@ body::-webkit-scrollbar {
     }
 
     .swatch {
-        width: 32px;
-        height: 12px;
+        width: 50%;
+        height: 24px;
     }
 
     .column {
-        transform: translateX(8%)
+        width: 614px;
     }
+
+    .content svg {
+        transform: scale(0.6);
+        padding-bottom: 24px;
+        margin-left: 0;
+    }
+
+    section {
+        width: 712px;
+    }
+
     .column .title {
         font-size: 20px;
         transform: translateX(-125%)
