@@ -32,3 +32,21 @@ ligh_btn.addEventListener('click', function() {
 dark_btn.addEventListener('click', () => {
     setDarkTheme()
 });
+
+function toggleOpen(section) {
+    if (section.classList[0].includes('closed')) {
+        section.classList.remove('section-content-closed');
+        section.classList.add('section-content-open');
+    }
+    else {
+        section.classList.remove('section-content-open');
+        section.classList.add('section-content-closed');
+    }
+}
+
+const titles = document.getElementsByClassName('title');
+for (var i = 0; i < titles.length; i++) {
+    titles[i].addEventListener('click', (event) => {
+        toggleOpen(event.target.nextElementSibling);
+    })
+}

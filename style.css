@@ -5,6 +5,24 @@
     --col-4: #ffffff00;
 }
 
+section {
+    border-left: 1px var(--col-1) dashed;
+    margin-bottom: 96px;
+    min-height: 0px;
+}
+
+.section-content-open {
+    height: fit-content;
+    transform-origin: top;
+    animation: open 0.25s forwards;
+    
+}
+
+.section-content-closed {
+    transform-origin: top;
+    animation: close 0.25s forwards;
+}
+
 body {
     margin: 0;
     height: 100%;
@@ -20,17 +38,20 @@ p {
 }
 
 #palette {
-    position:fixed;
+    position:absolute;
+    top: 0;
+    left: 0;
     width:fit-content;
     height:fit-content;
     border: 1px solid var(--col-1);
-    margin: 12px;
+    margin: 24px;
+    
 }
 
 .swatch {
     position: relative;
-    width: 12px;
-    height: 12px;
+    width: 32px;
+    height: 8px;
     cursor: pointer;
 }
 
@@ -58,18 +79,16 @@ p {
 
 .icon {
     width: fit-content;
-    height: fit-content;
+    padding:96px;
     margin: auto;
 }
 
 #links {
     margin: auto;
-    padding-bottom:128px;
 }
 
 #links a {
     display: inline-block;
-    padding: 24px;
     font-family: 'Necto Mono';
     text-decoration: none;
     color: var(--col-1)
@@ -84,13 +103,12 @@ p {
 .column .text {
     display: block;
     margin-bottom: 96px;
-    text-align: center;
     font-family: 'Necto Mono';
 }
 
 .content {
-    padding-top: 128px;
-    padding-bottom: 64px;
+    margin-bottom: 96px;
+    margin-top: 96px;
 }
 
 .content svg {
@@ -101,16 +119,14 @@ p {
     padding-bottom: 64px;
 }
 
-.title {
-    font-family: 'Coconat Bold';
-    font-weight: bolder;
-    color: #ffffff;
-    position: absolute;
-    transform: translate(-5%,-95%);
-    font-size: 124px;
-    line-height: 96px;
-    letter-spacing: -0.5rem;;
-    height: fit-content;
+.column .title {
+    position:absolute;
+    font-family: 'Necto Mono';
+    color: var(--col-1);
+    font-size: 14px;
+    text-align: right;
+    cursor: pointer;
+    transform: translateX(-150%);
 }
 
 footer {
@@ -124,6 +140,33 @@ footer {
 
 body::-webkit-scrollbar { 
     display: none;
+}
+
+@keyframes close {
+    from {
+        max-height: 1024px;
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    to {
+        max-height: 0px;
+        opacity: 0;
+        transform: scaleY(0);
+    }
+}
+
+@keyframes open {
+    from {
+        max-height: 0px;
+        opacity: 0;
+        transform: scaleY(0)
+    }
+    to {
+        max-height: 1024px;
+        opacity: 1;
+        transform: scaleY(1)
+    }
+
 }
 
 @font-face {
@@ -144,11 +187,15 @@ body::-webkit-scrollbar {
 
     .swatch {
         width: 32px;
-        height: 32px;
+        height: 12px;
     }
 
-    .title {
-        font-size: 124px;
-        transform: translate(0%,-100%);
+    .column {
+        transform: translateX(8%)
     }
+    .column .title {
+        font-size: 20px;
+        transform: translateX(-125%)
+    }
+    
 }
