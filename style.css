@@ -10,21 +10,14 @@ body {
     height: 100%;
     background-color: var(--col-3);
     user-select: none;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     overflow-x: hidden;
 }
 
 p {
     color: var(--col-1)
 }
-
-/* footer #icon {
-    width: fit-content;
-    height: fit-content;
-    transform: translateY(50%);
-    margin: auto;
-} */
 
 #palette {
     position:fixed;
@@ -51,24 +44,22 @@ p {
     float: left;
 }
 
-.bg-img {
+.bg {
     position: fixed;
     z-index: -1;
-    top: calc(50vh - 128px);
+    top: calc(0vh - 512px);
     left: 50%;
     transform: translate(-50%, 0%);
-    /* opacity: 0.5; */
     background-color: var(--col-2);
     filter: blur(128px);
-    width: 256px;
-    height: 256px;
+    width: 512px;
+    height: 512px;
 }
 
 .icon {
     width: fit-content;
     height: fit-content;
     margin: auto;
-
 }
 
 #links {
@@ -131,90 +122,8 @@ footer {
     background-image: linear-gradient(var(--col-4), var(--col-3));
 }
 
-.links {
-    width: 100%;
-    height: 100%;
-    padding: 24px;
-}
-
-.cross {
-    width: 14px;
-    height: 14px;
-    transform: translate(50%,5%)
-}
-
-.content a {
-    font-family: 'Necto Mono';
-    font-size: 26px;
-    color: var(--col-1);
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.content a:hover {
-    color: var(--col-2);
-}
-
-.center-v {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-#decal1 {
-    position: absolute;
-    z-index: 1;
-    transform: translate(60%, -110%);
-    animation: decal-anim 5s linear infinite;
-    animation-timing-function: ease-in-out;
-}
-
-.svg-fill-1 {
-    fill: var(--col-1);
-    fill-rule: evenodd;
-}
-
-.svg-fill-2 {
-    fill: var(--col-2);
-    fill-rule: evenodd;
-}
-
-.svg-fill-3 {
-    fill: var(--col-3);
-    fill-rule: evenodd;
-}
-
-.filter-grey {
-    filter: invert(72%) sepia(0%) saturate(0%) hue-rotate(319deg) brightness(83%) contrast(66%);
-}
-
 body::-webkit-scrollbar { 
     display: none;
-}
-
-@keyframes decal-anim {
-    0%, 100% {
-        transform: translate(50%, -115%);
-    }
-    50% {
-        transform: translate(50%, -110%);
-    }
-}
-
-@font-face {
-    font-family: 'Sinistre Dark';
-    src: url('resources/fonts/SINISTRE-DARK.OTF');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Coconat Bold';
-    src: url('resources/fonts/COCONAT-BOLD.OTF');
-    /* font-weight: bold;
-    font-style: normal; */
 }
 
 @font-face {

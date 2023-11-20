@@ -22,7 +22,7 @@ function setLightTheme() {
 function setDarkTheme() {
     r.style.setProperty('--col-3', '#000000');
     r.style.setProperty('--col-2', '#c8d0da');
-    r.style.setProperty('--col-1', '#111111');
+    r.style.setProperty('--col-1', '#333333');
 }
 
 ligh_btn.addEventListener('click', function() {
