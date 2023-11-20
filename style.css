@@ -1,7 +1,7 @@
 :root {
-    --col-1: #ff9999;
+    --col-1: #c8d0da;
     --col-2: #ff9999;
-    --col-3: #111111;
+    --col-3: #ffffff;
     --col-4: #ffffff00;
 }
 
@@ -30,7 +30,11 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.5;
+    /* opacity: 0.5; */
+    background-color: var(--col-2);
+    filter: blur(128px);
+    width: 256px;
+    height: 256px;
 }
 
 .icon {
