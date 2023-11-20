@@ -93,7 +93,8 @@ p {
     display: inline-block;
     font-family: 'Necto Mono';
     text-decoration: none;
-    color: var(--col-1)
+    color: var(--col-1);
+    font-size: 14px;
 }
 
 .column {
