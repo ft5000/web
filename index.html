@@ -12,6 +12,10 @@
     <div class="bg-img">
       <!-- <img width="512px" height="384px" src="resources/imgs/bg.jpg"></img> -->
     </div>
+    <div id="palette">
+      <div id="light" class="swatch"></div>
+      <div id="dark" class="swatch"></div>
+    </div>
     <div class="column">   
       <section class="content">
         <svg width="619px" height="328px">
@@ -58,16 +62,6 @@
         </svg>
       </div> -->
     </footer>
-    <script>
-      var text = "$A$b ^biaaaaan.  4$$FAB.F*$$$✞$$✵"
-      setInterval(function() {
-        var title = "";
-        for (var i = 0; i < 16; i++) {
-          var r = Math.round(Math.random() * (text.length - 1));
-          title += text[r];
-        }
-        document.title = title;
-      }, 60)
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
