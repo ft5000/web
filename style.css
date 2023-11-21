@@ -29,13 +29,13 @@ section p {
 .section-design-open {
     height: fit-design;
     transform-origin: top;
-    animation: open 0.5s forwards;
+    animation: open 0.25s forwards;
     
 }
 
 .section-design-closed {
     transform-origin: top;
-    animation: close 0.5s forwards;
+    animation: close 0.25s forwards;
 }
 
 .hide-hr {
@@ -46,7 +46,7 @@ section p {
     border: unset;
     margin: 0;
     border-top: 1px var(--col-1) dashed;
-    animation: hide 0.5s forwards;
+    animation: hide 0.25s forwards;
 }
 
 .show-hr {
@@ -57,7 +57,7 @@ section p {
     margin: 0;
     border: unset;
     border-top: 1px var(--col-1) dashed;
-    animation: show 0.5s forwards;
+    animation: show 0.25s forwards;
 }
 
 p {
