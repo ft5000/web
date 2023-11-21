@@ -5,6 +5,16 @@
     --col-4: #ffffff00;
 }
 
+body {
+    margin: 0;
+    height: 100%;
+    background-color: var(--col-3);
+    user-select: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: hidden;
+}
+
 section {
     border-left: 1px var(--col-1) dashed;
     margin-bottom: 96px;
@@ -48,16 +58,6 @@ section p {
     border: unset;
     border-top: 1px var(--col-1) dashed;
     animation: show 0.5s forwards;
-}
-
-body {
-    margin: 0;
-    height: 100%;
-    background-color: var(--col-3);
-    user-select: none;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    overflow-x: hidden;
 }
 
 p {
