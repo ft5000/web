@@ -14,15 +14,15 @@ var dark_btn = document.getElementById('dark');
 var r = document.querySelector(':root');
 
 function setLightTheme() {
-    r.style.setProperty('--col-3', '#ffffff');
+    r.style.setProperty('--col-3', '#898989');
     r.style.setProperty('--col-2', '#ff9999');
     r.style.setProperty('--col-1', '#c8d0da');
 }
 
 function setDarkTheme() {
     r.style.setProperty('--col-3', '#000000');
-    r.style.setProperty('--col-2', '#c8d0da');
-    r.style.setProperty('--col-1', '#333333');
+    r.style.setProperty('--col-2', '#9fc9ff');
+    r.style.setProperty('--col-1', '#898989');
 }
 
 ligh_btn.addEventListener('click', function() {

@@ -1,7 +1,7 @@
 :root {
     --col-1: #c8d0da;
     --col-2: #ff9999;
-    --col-3: #ffffff;
+    --col-3: #898989;
     --col-4: #ffffff00;
 }
 
@@ -169,7 +169,6 @@ body::-webkit-scrollbar {
         opacity: 1;
         transform: scaleY(1)
     }
-
 }
 
 @font-face {
