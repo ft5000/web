@@ -253,6 +253,14 @@ body::-webkit-scrollbar {
         width: 712px;
     }
 
+    .hide-hr {
+        width: 654px;
+    }
+
+    .show-hr {
+        width: 654px;
+    }
+
     .column .title {
         font-size: 20px;
         transform: translate(-125%, -40%)
