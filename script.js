@@ -14,7 +14,7 @@ var dark_btn = document.getElementById('dark');
 var r = document.querySelector(':root');
 
 function setLightTheme() {
-    r.style.setProperty('--col-3', '#898989');
+    r.style.setProperty('--col-3', '#8d8d8d');
     r.style.setProperty('--col-2', '#ff9999');
     r.style.setProperty('--col-1', '#c8d0da');
 }
@@ -34,16 +34,28 @@ dark_btn.addEventListener('click', () => {
 });
 
 function toggleOpen(target) {
+    var hr = target.previousElementSibling;
+    console.log(hr)
     var section = target.nextElementSibling;
+
     if (section.classList[0].includes('closed')) {
-        section.classList.remove('section-content-closed');
-        section.classList.add('section-content-open');
+        section.classList.remove('section-design-closed');
+        section.classList.add('section-design-open');
+
+        hr.classList.remove('show-hr');
+        hr.classList.add('hide-hr');
+
         target.innerHTML = target.innerHTML.replace("+","-")
     }
     else {
-        section.classList.remove('section-content-open');
-        section.classList.add('section-content-closed');
+        section.classList.remove('section-design-open');
+        section.classList.add('section-design-closed');
+
+        hr.classList.remove('hide-hr');
+        hr.classList.add('show-hr');
+
         target.innerHTML = target.innerHTML.replace("-","+")
+
     }
 }
 

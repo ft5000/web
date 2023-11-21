@@ -1,7 +1,7 @@
 :root {
     --col-1: #c8d0da;
     --col-2: #ff9999;
-    --col-3: #898989;
+    --col-3: #8d8d8d;
     --col-4: #ffffff00;
 }
 
@@ -12,16 +12,42 @@ section {
     width: 100%;
 }
 
-.section-content-open {
-    height: fit-content;
+section p {
+    padding-top: 24px;
+}
+
+.section-design-open {
+    height: fit-design;
     transform-origin: top;
-    animation: open 0.25s forwards;
+    animation: open 0.5s forwards;
     
 }
 
-.section-content-closed {
+.section-design-closed {
     transform-origin: top;
-    animation: close 0.25s forwards;
+    animation: close 0.5s forwards;
+}
+
+.hide-hr {
+    position: absolute; 
+    z-index: -1;
+    width: 748px;
+    height: 1px;
+    border: unset;
+    margin: 0;
+    border-top: 1px var(--col-1) dashed;
+    animation: hide 0.5s forwards;
+}
+
+.show-hr {
+    position: absolute; 
+    z-index: -1;
+    width: 748px;
+    height: 1px;
+    margin: 0;
+    border: unset;
+    border-top: 1px var(--col-1) dashed;
+    animation: show 0.5s forwards;
 }
 
 body {
@@ -44,7 +70,7 @@ p {
     left: 0;
     margin: 0;
     width: 100vw;
-    height: fit-content;
+    height: fit-design;
     border: 1px solid var(--col-1);
     z-index: 1;
 }
@@ -109,12 +135,12 @@ p {
     font-family: 'Necto Mono';
 }
 
-.content {
+.design {
     margin-bottom: 96px;
     margin-top: 96px;
 }
 
-.content svg {
+.design svg {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -123,13 +149,14 @@ p {
 }
 
 .column .title {
-    position:absolute;
+    position: absolute;
     font-family: 'Necto Mono';
     color: var(--col-1);
     font-size: 14px;
     text-align: right;
+    margin: 0;
     cursor: pointer;
-    transform: translateX(-150%);
+    transform: translate(-150%, -40%);
 }
 
 footer {
@@ -171,6 +198,26 @@ body::-webkit-scrollbar {
     }
 }
 
+@keyframes hide {
+    0% {
+        max-width: 748px;
+    }
+    100% {
+        max-width: 0px;
+    }
+}
+
+@keyframes show {
+    0% {
+        max-width: 0px;
+    }
+    100% {
+        max-width: 748px;
+    }
+}
+
+
+
 @font-face {
     font-family: 'Necto Mono';
     src: url('resources/fonts/NECTOMONO-REGULAR.OTF');
@@ -196,7 +243,7 @@ body::-webkit-scrollbar {
         width: 614px;
     }
 
-    .content svg {
+    .design svg {
         transform: scale(0.6);
         padding-bottom: 24px;
         margin-left: 0;
@@ -208,7 +255,7 @@ body::-webkit-scrollbar {
 
     .column .title {
         font-size: 20px;
-        transform: translateX(-125%)
+        transform: translate(-125%, -40%)
     }
     
 }
