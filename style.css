@@ -192,7 +192,7 @@ body::-webkit-scrollbar {
         transform: scaleY(0)
     }
     to {
-        max-height: 1024px;
+        max-height: 99999px;
         opacity: 1;
         transform: scaleY(1)
     }
