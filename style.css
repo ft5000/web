@@ -13,7 +13,6 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-x: hidden;
-    font-family: 'Necto Mono';
 }
 
 section {
@@ -25,8 +24,6 @@ section {
 
 section p {
     padding-top: 24px;
-    width: 85%;
-    margin: auto;
 }
 
 .section-design-open {
@@ -107,15 +104,9 @@ p {
 }
 
 .icon {
-    width: 50%;
-    height: 100%;
-    padding-top: 128px;
-    padding-bottom: 128px;
+    width: 100%;
+    padding-top: 48px;
     margin: auto;
-}
-
-.icon svg {
-    transform: translateX(25%);
 }
 
 #links {
@@ -132,24 +123,29 @@ p {
     font-size: 14px;
 }
 
-.link-container {
-    margin: auto; 
-    width: fit-content; 
-    text-align: center
-}
-
 .column {
-    width: 712px;
-    padding-top: 96px;
+    width: 768px;
+    padding-bottom:96px;
     margin: auto;
-    min-height: 60vh;
 }
 
-section svg {
+.column .text {
+    display: block;
+    margin-bottom: 96px;
+    font-family: 'Necto Mono';
+}
+
+.design {
+    margin-bottom: 96px;
+    margin-top: 96px;
+}
+
+.design svg {
     display: block;
     margin-left: auto;
     margin-right: auto;
     transform: scale(0.7);
+    padding-bottom: 24px;
 }
 
 .column .title {
@@ -225,6 +221,8 @@ body::-webkit-scrollbar {
 @font-face {
     font-family: 'Necto Mono';
     src: url('resources/fonts/NECTOMONO-REGULAR.OTF');
+    /* font-weight: normal;
+    font-style: normal; */
 }
 
 @media only screen and (orientation: portrait) {
@@ -255,11 +253,6 @@ body::-webkit-scrollbar {
 
     .show-hr {
         width: 654px;
-    }
-
-    .icon svg {
-        transform: translateX(150%);
-        opacity: 0;
     }
 
     .column .title {
